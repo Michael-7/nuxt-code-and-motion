@@ -71,10 +71,13 @@
 			display: grid;
 			grid-template-columns: 1fr 1fr 1fr;
 			gap: @spacing-6 @spacing-3;
+
+			@media @mobile {
+				grid-template-columns: 1fr;
+			}
 		}
 
 		.post {
-
 			&:hover {
 				.post__img {
 					&-overlay {
@@ -153,6 +156,7 @@
 
 			img {
 				width: 100%;
+				height: 100%;
 				border-radius: 4px;
 			}
 

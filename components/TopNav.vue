@@ -35,6 +35,10 @@
 				height: 2px;
 				background: @primary-grad;
 			}
+
+			@media @mobile {
+				display: none;
+			}
 		}
 
 		&__menu {

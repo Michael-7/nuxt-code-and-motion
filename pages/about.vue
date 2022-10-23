@@ -23,7 +23,7 @@
 				Because of the lack of nice tutorials out there I wanted to make some good resources to help people that are into design get into code.
 				Coding is really not that difficult once you learn the basics.
 				Even with basic knowledge you can do a lot of things to upgrade your workflow
-				and speed up those tasks that are brain numbingly boring so you can focus on the <span class="about__egg">fun stuff</span><img class="about__bg-img" src="~/assets/img/about/easter-egg.png" alt="Michael"/>.
+				and speed up those tasks that are brain numbingly boring so you can focus on the <span class="about__egg">fun stuff</span>.
 			</p>
 			<p class="mb-4">
 				Coding can be fun and creative too, especially when you combine it with creative software like After Effects.
@@ -48,7 +48,8 @@
 		height: 85vh;
 
 		&__content {
-			width: 700px;
+			max-width: 700px;
+			padding: @spacing-2;
 			margin-top: @block-spacing-5;
 		}
 
@@ -87,21 +88,6 @@
 				z-index: 0;
 				border-radius: 5px;
 			}
-		}
-
-		&__bg-img {
-			transform: scaleX(-1);
-			height: 100vh;
-			position: absolute;
-			top: 0;
-			left: 0;
-			z-index: -1;
-			opacity: 0;
-			transition: opacity 2s ease .3s;
-		}
-
-		&__egg:hover + img {
-			opacity: .35;
 		}
 
 		&__link {

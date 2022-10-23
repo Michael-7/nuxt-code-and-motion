@@ -43,7 +43,6 @@
 
 <style lang="less">
 	.blog-post {
-
 		&-header {
 			padding-top: @block-spacing-2;
 
@@ -53,6 +52,10 @@
 				flex-direction: row;
 				align-items: center;
 				max-width: 1000px;
+
+				@media @mobile {
+					flex-direction: column;
+				}
 			}
 
 			&__details {
@@ -127,6 +130,11 @@
 		&-body {
 			.content {
 				width: 775px;
+			}
+
+			pre {
+				overflow-x: scroll;
+				overflow-y: hidden;
 			}
 
 			code {
