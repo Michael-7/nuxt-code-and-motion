@@ -1,6 +1,9 @@
 <template>
-	
 	<div class="about">
+		<Head>
+			<Title>About - Code and Motion</Title>
+			<Meta name="description" content="Hey, I’m Michael A front-end developer and digital designer from the Netherlands." />
+		</Head>
 		<div class="about__content">
 			<div class="about__header">
 				<div>

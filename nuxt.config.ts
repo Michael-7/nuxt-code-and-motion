@@ -35,7 +35,8 @@ export default defineNuxtConfig({
 					src: 'https://www.googletagmanager.com/gtag/js?id=UA-175161482-1',
 					async: '',
 				}
-			]
+			],
+			link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}],
 		},
 	}
 });

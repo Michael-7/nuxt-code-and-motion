@@ -1,5 +1,9 @@
 <template>
 	<div class="home">
+		<Head>
+			<Title>Code and Motion - Development for Web Animation and Motion Design</Title>
+			<Meta name="description" content="Learn how to develop code for the Adobe products and bring animation to the web." />
+		</Head>
 		<img class="home__img" src="~/assets/svg/logo-grad-2.svg" alt="Code and Motion">
 		<h1 class="home__header">Code and Motion</h1>
 		<h2 class="home__paragraph"><span class="font-green-accent">Code</span> for motion design</h2>

@@ -1,5 +1,9 @@
 <template>
 	<div class="container blog">
+		<Head>
+			<Title>Blog - Code and Motion</Title>
+			<Meta name="description" content="Learn how to develop code for the Adobe products and bring animation to the web." />
+		</Head>
 		<div class="content">
 			<div class="blog-header">
 				<p class="blog-header__sub-title">Blog</p>
@@ -17,7 +21,7 @@
 				<div v-for="article in articles" :key="article.slug" class="post">
 					<NuxtLink :to="'/blog/' + article.slug">
 						<div class="post__img">
-							<img :src="'/assets/img/blog/' + article.img" alt="">
+							<img :src="'/img/' + article.img" :alt="article.img">
 							<div class="post__img-overlay">
 								<p>{{article.description}}</p>
 								<div class="post__img-overlay-tags">

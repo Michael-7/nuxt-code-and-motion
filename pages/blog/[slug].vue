@@ -1,5 +1,9 @@
 <template>
 	<div class="blog-post">
+		<Head>
+			<Title>{{article.title}} - Code and Motion</Title>
+			<Meta name="description" :content="article.description" />
+		</Head>
 		<div class="container blog-post-header">
 			<div class="content">
 				<div class="blog-post-header__details">
@@ -10,7 +14,7 @@
 						</div>
 						<div class="blog-post-header__author">
 							<img src="~/assets/img/about/michael-square.jpeg" alt="Code and Motion CEO">
-							<span>by <span class="bold">Michael Heemskerk</span> <br/> On 15 Dec, 2020 </span>
+							<span>by <span class="bold">Michael Heemskerk</span> <br/> On {{article.date}} </span>
 						</div>
 					</div>
 				</div>
