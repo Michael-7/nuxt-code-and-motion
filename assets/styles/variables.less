@@ -1,0 +1,80 @@
+@primary-green: #51E570;
+@primary-blue: #44EEF2;
+@primary-text: #F6F6F6;
+@secondary-text: #838896;
+@background: #020A17;
+@background-light: #101727;
+@background-accent: #202940;
+@black: #000;
+
+@primary-grad: linear-gradient(262.53deg, #51E570 5.89%, #44EEF2 94.12%);
+@primary-grad-angled: linear-gradient(297deg, #51E570 5.89%, #44EEF2 94.12%);
+
+@spacing-1: 8px;
+@spacing-2: 16px;
+@spacing-3: 24px;
+@spacing-4: 32px;
+@spacing-5: 40px;
+@spacing-6: 48px;
+@spacing-7: 56px;
+@spacing-8: 64px;
+
+@block-spacing-1: 20px;
+@block-spacing-2: 40px;
+@block-spacing-3: 60px;
+@block-spacing-4: 80px;
+@block-spacing-5: 100px;
+@block-spacing-6: 120px;
+
+.icon(@name, @size, @color) {
+	display: inline-block;
+	width: @size;
+	height: @size;
+	mask-size: cover;
+	-webkit-mask-size: cover;
+	background-color: @color;
+	-webkit-mask-image: url("~/assets/svg/@{name}.svg");
+	mask-image: url("~/assets/svg/@{name}.svg");
+}
+
+.h1() {
+	font-size: 40px;
+	line-height: 1.25;
+	font-weight: 500;
+}
+
+.h2() {
+	font-size: 32px;
+	line-height: 1;
+	font-weight: 500;
+}
+
+.large-text() {
+	font-size: 24px;
+	line-height: 1;
+	.thin();
+}
+
+.regular-text() {
+	font-size: 16px;
+	line-height: 1.35;
+	.thin();
+}
+
+.bold() {
+	font-weight: 600;
+}
+
+.thin() {
+	font-weight: 400;
+}
+
+.cnm-link() {
+	color: @primary-green;
+	text-decoration: underline;
+
+	&:hover {
+		color: @primary-blue;
+		filter: drop-shadow(0 0 5px #44eff2fb);
+	}
+}

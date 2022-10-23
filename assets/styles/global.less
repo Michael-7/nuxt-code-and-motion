@@ -1,0 +1,110 @@
+@import "./normalize.less";
+
+@font-face {
+	font-family: 'Cooper Hewitt';
+	src: url('~/assets/fonts/CooperHewitt-Book.woff') format('woff'),
+		url('~/assets/fonts/CooperHewitt-Book.svg#CooperHewitt-Book') format('svg'),
+		url('~/assets/fonts/CooperHewitt-Book.eot'),
+		url('~/assets/fonts/CooperHewitt-Book.eot?#iefix') format('embedded-opentype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Cooper Hewitt';
+	src: url('~/assets/fonts/CooperHewitt-Medium.woff') format('woff'),
+		url('~/assets/fonts/CooperHewitt-Medium.svg#CooperHewitt-Medium') format('svg'),
+		url('~/assets/fonts/CooperHewitt-Medium.eot'),
+		url('~/assets/fonts/CooperHewitt-Medium.eot?#iefix') format('embedded-opentype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Cooper Hewitt';
+	src: url('~/assets/fonts/CooperHewitt-Semibold.woff') format('woff'),
+		url('~/assets/fonts/CooperHewitt-Semibold.svg#CooperHewitt-Semibold') format('svg'),
+		url('~/assets/fonts/CooperHewitt-Semibold.eot'),
+		url('~/assets/fonts/CooperHewitt-Semibold.eot?#iefix') format('embedded-opentype');
+	font-weight: 600;
+	font-style: normal;
+}
+
+body {
+	background-color: @background;
+}
+
+p, a, span, h1, h2, h3, h4, h5, h6, li {
+	color: @primary-text;
+	font-family: 'Cooper Hewitt';
+	text-decoration: none;
+	margin: 0;
+}
+
+button {
+	font-family: 'Cooper Hewitt';
+	cursor: pointer;
+}
+
+h1 {
+	.h1();
+}
+
+h2 {
+	.h2();
+}
+
+p {
+	.regular-text();
+	margin-top: @spacing-2;
+	margin-bottom: @spacing-2;
+}
+
+.primary-button {
+	.bold();
+	padding: @spacing-1 @spacing-3;
+	border-radius: 4px;
+	border: 2px solid @primary-green;
+	background-color: transparent;
+	color: @primary-green;
+
+	&--big {
+		.large-text();
+		.bold();
+	}
+}
+
+.cnm-link {
+	.cnm-link();
+}
+
+.font-green-accent {
+	color: @primary-green;
+}
+
+.font-blue-accent {
+	color: @primary-blue;
+}
+
+.bold {
+	.bold();
+}
+
+.thin {
+	.thin();
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	padding: @spacing-4;
+
+	.content {
+		max-width: 1200px;
+	}
+}
+
+// prevent animations on initial pageload
+.about__bg-img {
+	opacity: 0;
+}
