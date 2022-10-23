@@ -90,6 +90,12 @@
 
 			&__tags {
 				padding: @spacing-2 0;
+				display: flex;
+				gap: @spacing-1;
+
+				span {
+					.cnm-tag();
+				}
 			}
 
 			&__author {
@@ -118,10 +124,20 @@
 			.content {
 				width: 775px;
 			}
+
+			code {
+				span {
+					font-family: 'Roboto Mono', monospace;
+				}
+			}
 		}
 
 		p a {
 			.cnm-link();
+		}
+
+		h2 {
+			margin-top: @block-spacing-3;
 		}
 	}
 </style>

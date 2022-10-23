@@ -1,6 +1,6 @@
 ---
 title: After Effects Scripting for Absolute Beginners
-description: Welcome to the tutorial after effects scripting for absolute beginners. At the end of the tutorial you will be able to write a script that applies a expressions to all the properties you have selected. But even better you will also have a good understanding of all the different aspects of scripting.
+description: This tutorial will show you how to write a script that applies a expressions to all the properties you have selected. But even better you will also have a good understanding of all the different aspects of scripting.
 img: ae-scripting-beginners.png
 slug: after-effects-absolute-beginners
 video: UutXfHp9KDg

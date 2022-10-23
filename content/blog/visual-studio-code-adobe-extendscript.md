@@ -1,6 +1,6 @@
 ---
 title: Visual Studio Code for Adobe ExtendScript
-description: ExtendScript Toolkit CC is used a lot in scripting for the Adobe products like After Effects, Premier, Illustrator and Photoshop. It’s probably the best option for beginners that just want to create some small scripts. However for someone like me it’s quite annoying, not very customizable and very limited in possibilities. But we can now use Visual Studio Code for Adobe ExtendScript scripting.
+description: ExtendScript Toolkit CC is used a lot in scripting for the Adobe products like After Effects, Premier, Illustrator and Photoshop. But we can now use Visual Studio Code for Adobe ExtendScript scripting.
 img: vscode-extendscript.png
 slug: visual-studio-code-adobe-extendscript
 video: a90H-Pf61LQ

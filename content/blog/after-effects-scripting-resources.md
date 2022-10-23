@@ -1,6 +1,6 @@
 ---
 title: After Effects Scripting Resources
-description: ExtendScript Toolkit CC is used a lot in scripting for the Adobe products like After Effects, Premier, Illustrator and Photoshop. It’s probably the best option for beginners that just want to create some small scripts. However for someone like me it’s quite annoying, not very customizable and very limited in possibilities. But we can now use Visual Studio Code for Adobe ExtendScript scripting.
+description: A list of all the essential resources you can use while you are scripting for the Adobe suite.
 img: ae-scripting-resources.png
 slug: after-effects-scripting-resources
 video: a90H-Pf61LQ

@@ -16,11 +16,14 @@
 			<div class="blog-posts">
 				<div v-for="article in articles" :key="article.slug" class="post">
 					<NuxtLink :to="'/blog/' + article.slug">
-						<div>
+						<div class="post__img">
 							<img :src="'/assets/img/blog/' + article.img" alt="">
-							<!-- <h2>{{article.title}}</h2>
-							<p>{{article.slug}}</p>
-							<p>{{article.description}}</p> -->
+							<div class="post__img-overlay">
+								<p>{{article.description}}</p>
+								<div class="post__img-overlay-tags">
+									<span v-for="tag of article.tags">{{tag}}</span>
+								</div>
+							</div>
 						</div>
 						<h2 class="post__title">{{article.title}}</h2>
 					</NuxtLink>
@@ -63,18 +66,94 @@
 		&-posts {
 			display: grid;
 			grid-template-columns: 1fr 1fr 1fr;
-			gap: @spacing-6;
+			gap: @spacing-6 @spacing-3;
 		}
 
 		.post {
 
+			&:hover {
+				.post__img {
+					&-overlay {
+						opacity: 1;
+					}
+
+					&:after {
+						background: linear-gradient(179.58deg, #101727 0.33%, rgba(16, 23, 39, 0.75) 99.59%);
+						backdrop-filter: blur(5px);
+					}
+
+					&:before {
+						background: @primary-grad;
+					}
+				}
+
+				.post__title {
+					color: @primary-blue;
+				}
+			}
+
+			&__img {
+				position: relative;
+				height: 216px;
+
+				&-overlay {
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					padding: @spacing-3;
+					opacity: 0;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					z-index: 1;
+
+					p {
+						margin: 0;
+					}
+
+					span {
+						.cnm-tag();
+					}
+
+					&-tags {
+						display: flex;
+						gap: @spacing-1;
+					}
+				}
+
+				&:after {
+					content: '';
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					border-radius: 4px;
+					background-color: transparent;
+					border: 1px solid @background-light;
+				}
+
+				&:before {
+					content: '';
+					position: absolute;
+					height: 10px;
+					bottom: -2px;
+					left: 0;
+					right: 0;
+					border-radius: 4px;
+					background: transparent;
+				}
+			}
+
 			img {
 				width: 100%;
-				border-radius: 10px;
+				border-radius: 4px;
 			}
 
 			&__title {
-				margin: @spacing-1 @spacing-1;
+				margin: @spacing-2 @spacing-1;
 			}
 		}
 	}

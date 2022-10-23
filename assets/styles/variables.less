@@ -10,6 +10,8 @@
 @primary-grad: linear-gradient(262.53deg, #51E570 5.89%, #44EEF2 94.12%);
 @primary-grad-angled: linear-gradient(297deg, #51E570 5.89%, #44EEF2 94.12%);
 
+@font-family: 'Cooper Hewitt';
+
 @spacing-1: 8px;
 @spacing-2: 16px;
 @spacing-3: 24px;
@@ -61,6 +63,12 @@
 	.thin();
 }
 
+.small-text() {
+	font-size: 14px;
+	line-height: 1.35;
+	.thin();
+}
+
 .bold() {
 	font-weight: 600;
 }
@@ -77,4 +85,15 @@
 		color: @primary-blue;
 		filter: drop-shadow(0 0 5px #44eff2fb);
 	}
+}
+
+.cnm-tag() {
+	border: 2px solid @background;
+	background-color: @background-light;
+	padding: 4px @spacing-3;
+	border-radius: 100px;
+}
+
+.cnm-tag--small() {
+
 }
