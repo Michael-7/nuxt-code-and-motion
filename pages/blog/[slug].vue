@@ -53,7 +53,7 @@
 				align-items: center;
 				max-width: 1000px;
 
-				@media @mobile {
+				@media @tablet {
 					flex-direction: column;
 				}
 			}
@@ -69,6 +69,11 @@
 				box-sizing: border-box;
 				justify-content: space-between;
 				margin-right: -@block-spacing-4;
+
+				@media @tablet {
+					margin-right: 0;
+					min-height: 350px;
+				}
 
 				&:before {
 					content: '';
@@ -120,20 +125,34 @@
 			&__video {
 				position: relative;
 
+				@media @tablet {
+					width: 90%;
+					height: auto;
+				}
+
+				@media @mobile {
+					width: 100%;
+					height: auto;
+				}
+
 				iframe {
 					border-radius: 15px;
 					box-shadow: -1px 0px 20px fade(@black, 50%);
+					
+					@media @tablet {
+						width: 100%;
+					}
 				}
 			}
 		}
 
 		&-body {
 			.content {
-				width: 775px;
+				max-width: 775px;
 			}
 
 			pre {
-				overflow-x: scroll;
+				overflow-x: auto;
 				overflow-y: hidden;
 			}
 
