@@ -1,0 +1,17 @@
+[build]
+	#The directory that contains the deploy ready files
+	publish = ".output/public"
+	#Default build command
+	command = "npx nuxi generate"
+
+[[redirects]]
+  from = "/extendscript/after-effects-scripting-basics"
+  to = "/blog/after-effects-absolute-beginners"
+
+[[redirects]]
+	from = "/extendscript/visual-studio-code-for-adobe-extendscript"
+	to = "/blog/visual-studio-code-adobe-extendscript"
+
+[[redirects]]
+	from = "/extendscript/after-effects-scripting-resources"
+	to = "/blog/after-effects-scripting-resources"
