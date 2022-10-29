@@ -2,10 +2,9 @@
 title: After Effects Scripting for Absolute Beginners
 description: This tutorial will show you how to write a script that applies a expressions to all the properties you have selected. But even better you will also have a good understanding of all the different aspects of scripting.
 img: ae-scripting-beginners.png
-slug: after-effects-absolute-beginners
 video: UutXfHp9KDg
-tags: ['After Effect', 'ExtendScript']
-date: 4 Oct, 2019
+tags: ['After Effects', 'ExtendScript']
+date: 2019-10-04
 ---
 
 Welcome to the tutorial after effects scripting for absolute beginners. At the end of the tutorial you will be able to write a script that applies a expressions to all the properties you have selected. But even better you will also have a good understanding of all the different aspects of scripting. I will discuss all the concepts one by one so it will become very clear how each part of the code works. If you want to know a specific thing I’ll put the timestamps for all the things I cover in the description. Let’s Begin!
@@ -88,9 +87,7 @@ Conditional statements are used to check certaivn conditions and perform differe
 	}
 ```
 	
-Some Resources to get to know Conditions more in depth:
-<https://www.w3schools.com/js/js_comparisons>
-<https://www.w3schools.com/js/js_if_else>
+Some Resources to get to know Conditions more in depth: <https://www.w3schools.com/js/js_comparisons> and <https://www.w3schools.com/js/js_if_else>
 
 ## Loops
 

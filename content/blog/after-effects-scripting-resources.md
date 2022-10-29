@@ -2,81 +2,72 @@
 title: After Effects Scripting Resources
 description: A list of all the essential resources you can use while you are scripting for the Adobe suite.
 img: ae-scripting-resources.png
-slug: after-effects-scripting-resources
-video: a90H-Pf61LQ
-tags: ['After Effect', 'Visual Studio Code']
-date: 22 Oct, 2019
+video: 30-xfOdGU6E
+tags: ['After Effects', 'ExtendScript']
+date: 2019-10-16
 ---
 
-ExtendScript Toolkit CC is used a lot in scripting for the Adobe products like After Effects, Premier, Illustrator and Photoshop. It’s probably the best option for beginners that just want to create some small scripts. However for someone like me it’s quite annoying, not very customizable and very limited in possibilities. Normally code editors are quite extensive and well developed. However Adobe stopped developing and updating ExtendScript Toolkit CC so it’s outdated, slow and not very customizable. But there was never really a good alternative… Until NOW! We can now use Visual Studio Code for Adobe ExtendScript scripting.
+Starting with After Effects scripting can seem like a daunting task. To help develop your abilities good resources are essential. There is a small but very tight nit community of After Effects programmers that have created loads of amazing After Effects scripting resources. Apart from this amazing website, here’s a list of the majority that I know of:
 
-## Visual Studio Code
+## Collection of docs for all Adobe Products
+[Docs For Aobe](https://docsforadobe.dev/) - A list of the best docs for all the Adobe Products.
 
-When developing websites or web-apps I normally use Visual Studio Code. It’s a very light weight code editor and offers a lot of customizability with the help of many free downloadable extensions. Today I will take you through the steps to create a workspace for developing for ExtendScript. There a couple of extensions that Adobe especially made for debugging in Visual Studio Code. Plus there is a library for type checking so you get hints and errors along the way while you code. This is super helpful for spotting mistakes early.
+## After Effects Documentation
 
-You can download Visual Studio Code here: <https://code.visualstudio.com/>
+[Interactive documentation](http://docs.aenhancers.com/) - This is the main documentation that I use, here you can find all the different classes that are specific to After Effects. This is great to have next to you while programming so you can look-up what the possibilities are of each After Effects object that you use within your script.
 
-## Create a Workspace
+[NEW - Adobe’s JavaScript Tools Guide](https://extendscript.docsforadobe.dev/index.html) – A new really big collection of information created by the AEnhancers team. This is a gold mine tbh.
 
-To have a pleasant working experience I highly reccomend creating a dedicated folder for Adobe scripting. Here you can put all your scripts that you are currently developing or that you already developed. This is great so you can reference your old code fast when coding in the future. You do this by opening your scripts folder in Visual Studio Code and going to File > Save Workspace As…
+[Adobe's Introduction To Scripting](https://abg.ee/wp-content/uploads/2019/10/Adobe-Intro-To-Scripting.pdf) - A 52 page PDF file with a lot of beginner information about scripting.
 
-This will create a .code-workspace file where the settings of the workspace reside, you can change these in the future.
+[API documentation by YEARBOOK](http://yearbook.github.io/esdocs/#/) - This API documentation contains the different ScriptUI classes and JavaScript classes that are available within ExtendScript. Unfortunately it doesn’t include all the After Effects classes.
 
-## Type Definitions
+## Forums
 
-To let Visual Studio Code check our code we need the definitions of all the types that can be used. There is a great resource by Pravdomil and Atarabi on GitHub. Thanks guys!
+[Adobe’s After Effects Forum](https://community.adobe.com/t5/After-Effects/bd-p/after-effects) – On the left hand side you can filter on topics, select scripting for great scripting posts.
 
-The type definitions for Adobe: <https://github.com/pravdomil/Types-for-Adobe>
+[Aenhancers](https://www.aenhancers.com/) – A dedicated forum for programming for After Effects, it’s not very active but there are great articles.
 
-Download all of the types and save them somewhere on your computer. In the scripting workspace create a folder called types. Add the types that you need depending on which software you’re scripting for. Rename the main file to index.d.ts. Now the IntelliSense should work!
+## Script UI
 
-![Visual Studio Code Intellisense](/img/intellisense.png){style="max-width: 100%"}
+[Peter Kahrel’s ScriptUI for Dummies](https://creativepro.com/files/kahrel/indesign/scriptui.html) – The best resource for learning how to write ScriptUI.
 
-## Error Reporting
+[API documentation by YEARBOOK](http://yearbook.github.io/esdocs/#/) – Again the YEARBOOK documentation, select ScriptUI in the left drop-down to see all the classes that are available.
 
-Normally JavaScript files don’t have error reporting but you can enable this by using a config file. To de this create a `jsconfig.json` file in the main folder of your workspace. Then add these settings to the file:
+[Joonas Pääkkö’s ScriptUI builder](https://scriptui.joonas.me/) – If you’re just starting out and don’t know how to use ScriptUI or if you’re just lazy you can use this tool to build custom ScriptUI panels. Actually learning the language is of course a better option if you want full flexibility.
 
-```json
-	{
-		"compilerOptions": {
-			"module": "none",
-			"target": "ES3",
-			"noLib": true,
-			"checkJs": true
-		}
-	}
-```
+## Free Scripts
 
-Now check if your .jsx files are on JavaScript language mode by looking in the bottom right corner of the Visual Studio Code window. If it’s on JavaScript it should work like this!
+Redefinery Script Bundle – A absolutely amazing scripts bundle with great scripts to pick apart and learn from. The Gimme Prop Path is great to use while scripting, it gives you the location of the property you select within the After Effects program. *Note of 2022 - the redefinery website is down but search the internet on 'Redefinery Script Bundle' and you will find a download* 
 
-![Visual Studio Code Error Reporting](/img/error-reporting.png){style="max-width: 100%"}
+[Crgreen scripts](http://www.crgreen.com/aescripts/) – A long list of scripts that can be picked apart and analyzed to learn how they work.
 
-## Adobe Script Runner
+[Scriptlets by Zack Lovatt](https://lova.tt/scriptlets) - Zack Lovatt is such a OG in the AE Scripting world, and still a very active member in the community. Here is a list of his scripts.
 
-To run the scripts for Visual Studio Code directly in your Adobe program you need to install a extension. Go to extensions in the left menu bar and search for: “Adobe Script Runner” by renderTom. Install it and read the description to see how it works. Now you can use `ctrl + shift + p` to open up a command prompt. Type “Adobe” to see all your options to run your script in, with the command next to it! For After Effects it’s `ctrl + r`.
+[MotionScript](http://motionscript.com/) - Dan Ebberts’ AE Expressions and scripting resource
 
-## Debugging
+## HTML 5 Panels
 
-If you’re writing big scripts you’ll want to be able to debug your application. To do this the Adobe team has blessed us with the ”ExtendScript Debugger” extension. To set this up there are a couple of steps required:
+[Adobe-CEP GitHub](https://github.com/Adobe-CEP) – For the more advanced programmers among us, a guide on creating extensions with HTML 5, CSS and After Effects scripts.
 
-- Install ExtendScript Debugger from the extensions menu.
-- Go to the debug mode (left menu) and click on the gear icon at the top to create a launch.json.
-- Insert your name and script path.
-- Restart Visual Studio Code.
-- Click on the yellow “select target application” in de bottom right.
-- Select the application that you want to use to run the script.
-- Click “yes” to open the application.
-- Go to settings and click on allow breakpoints everywhere.
-- Set some breakpoints to debug your code.
-- Start your script by clicking the green arrow icon at the top of the debugging screen.
-- Happy debugging!
+[Adobe’s short guide](https://www.adobe.com/devnet/creativesuite/articles/a-short-guide-to-HTML5-extensions.html) – A short guide to HTML 5 extensions.
 
-## Other Extensions
+## JavaScript
 
-[Document This by Joel Day](https://marketplace.visualstudio.com/items?itemName=joelday.docthis) – is a Visual Studio Code extension that automatically generates detailed JSDoc comments for both TypeScript and JavaScript files. JSDoc is very handy for keeping your code readable and understandable in the future. Here’s a great resource: <https://devdocs.io/jsdoc/>
+[Mozilla Javascript Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics) - the MDN web docs are very handy for everything web development.
 
-[Beautify by HookeyQR](https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify) – To have custom settings for formatting documents.
+[Eloquent JavaScript](http://eloquentjavascript.net/) – Free E-book like website with in-depth content on the basics of JavaScript.
 
-[file-icons by file-icons](https://marketplace.visualstudio.com/items?itemName=file-icons.file-icons) – Add nice flat icons to the files. I’m a visual person after all 😉
+[w3schools](https://www.w3schools.com/js/default.asp) – Hands on JavaScript tutorials.
 
-That was it! Thanks for your attention and remember to use Visual Studio Code for Adobe ExtendScript scripting the next time you have a big project.
+## Podcasts
+
+[School of Motion Ep. 18](https://www.schoolofmotion.com/podcast/how-much-do-after-effects-script-developers-make-a-chat-with-zack-lovatt/) - I really love this episode with Zack Lovatt, it gives insight in where After Effects scripting could take you.
+
+## Articles
+
+[Building Dokyo by David Hawkins](https://medium.com/better-programming/building-a-modern-extension-for-after-effects-eea269544b50) - This medium article is a great introduction into HTML 5 panels and Extensions.
+
+------
+
+Thanks for reading! Be sure to use these After Effects Scripting resources for your new projects, it will speed up the process 😉

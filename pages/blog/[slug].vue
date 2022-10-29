@@ -14,7 +14,7 @@
 						</div>
 						<div class="blog-post-header__author">
 							<img src="~/assets/img/about/michael-square.jpeg" alt="Code and Motion CEO">
-							<span>by <span class="bold">Michael Heemskerk</span> <br/> On {{article.date}} </span>
+							<span>by <span class="bold">Michael Heemskerk</span> <br/> On {{convertDate(article.date)}} </span>
 						</div>
 					</div>
 				</div>
@@ -33,12 +33,17 @@
 	</div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 	const { path } = useRoute();
 
 	const {data: article} = await useAsyncData('getarticle', () => {
 		return queryContent().where({_path: path}).findOne();
-	})
+	});
+
+	function convertDate(inputDate: string): string {
+		let date = new Date(inputDate);
+		return date.toLocaleString('en-GB', {dateStyle: 'medium'});
+	}
 </script>
 
 <style lang="less">
@@ -169,6 +174,13 @@
 
 		h2 {
 			margin-top: @block-spacing-3;
+		}
+
+		hr {
+			border: none;
+			height: 2px;
+			background: @background-accent;
+			margin: @block-spacing-2 0;
 		}
 	}
 </style>

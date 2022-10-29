@@ -18,8 +18,8 @@
 				<p class="blog-filters__sub-title">Categories</p>
 			</div> -->
 			<div class="blog-posts">
-				<div v-for="article in articles" :key="article.slug" class="post">
-					<NuxtLink :to="'/blog/' + article.slug">
+				<div v-for="article in articles" :key="article.index" class="post">
+					<NuxtLink :to="article._path">
 						<div class="post__img">
 							<img :src="'/img/' + article.img" :alt="article.img">
 							<div class="post__img-overlay">
@@ -39,8 +39,8 @@
 
 <script setup>
 	const {data: articles} = await useAsyncData('getarticles', () => {
-		return queryContent('blog').find();
-	})
+		return queryContent('blog').sort({date: -1}).find();
+	});
 </script>
 
 <style scoped lang="less">
