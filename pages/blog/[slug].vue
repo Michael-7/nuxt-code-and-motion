@@ -18,9 +18,10 @@
 						</div>
 					</div>
 				</div>
-				<div class="blog-post-header__video">
+				<div class="blog-post-header__overlay" v-if="article.video">
 					<iframe width="560" height="315" color="white" :src="'https://www.youtube-nocookie.com/embed/' + article.video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
+				<img v-else class="blog-post-header__overlay blog-post-header__overlay--img" :src="'../img/' + article.img" :alt="article.title"/>
 			</div>
 		</div>
 		<div class="container blog-post-body">
@@ -127,7 +128,7 @@
 				}
 			}
 
-			&__video {
+			&__overlay {
 				position: relative;
 
 				@media @tablet {
@@ -140,13 +141,18 @@
 					height: auto;
 				}
 
-				iframe {
+				iframe, &--img {
 					border-radius: 15px;
 					box-shadow: -1px 0px 20px fade(@black, 50%);
 					
 					@media @tablet {
 						width: 100%;
 					}
+				}
+
+				&--img {
+					width: 560px;
+					height: 315px;
 				}
 			}
 		}
