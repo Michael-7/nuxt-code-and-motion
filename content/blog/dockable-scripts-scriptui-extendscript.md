@@ -7,9 +7,9 @@ tags: ['ScriptUI', 'ExtendScript']
 date: 2022-10-29
 ---
 
-Welcome today we're going to take a deep dive into Adobe's ScriptUI so you will be able to make your own dock-able panels in most of the Adobe programs.
+Welcome today we're going to take a deep dive into Adobe's ScriptUI so you will be able to make your own dock-able panels in most of the Adobe programs. This is a follow up of the :homelink{to="/blog/after-effects-absolute-beginners" text="After Effects Scripting for Absolute Beginners"} tutorial.
 
-For this particular tutorial I'll will be working with After Effects but the ScriptUI programming applies almost the whole Adobe suite. I'll be using Visual Studio Code to create the script because not everybody can use the Extendscript Toolkit nowadays because of compatibility issues. If you want to know how to set that up check out my other tutorial called: "Visual Studio Code for Adobe ExtendScript".
+For this particular tutorial I'll will be working with After Effects but the ScriptUI programming applies almost the whole Adobe suite. I'll be using Visual Studio Code to create the script because not everybody can use the Extendscript Toolkit nowadays because of compatibility issues. If you want to know how to set that up check out my other tutorial called: :homelink{to="/blog/visual-studio-code-adobe-extendscript" text="Visual Studio Code for Adobe ExtendScript"}
 
 What is ScriptUI? Well UI stands for User Interface so it's a module within the Adobe library that you can use to create your own panels for your scripts. Like I said in my last tutorial, most programming languages contain objects that you can manipulate. ScriptUI also consists of a lot of objects. To create a new UI you need to make a new Window object. After you have your window object you can add different control objects like text inputs, buttons, dropdowns, groups, tabs and radio buttons and much more.
 

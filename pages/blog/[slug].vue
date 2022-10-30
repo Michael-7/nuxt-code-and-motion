@@ -37,7 +37,7 @@
 <script setup lang="ts">
 	const { path } = useRoute();
 
-	const {data: article} = await useAsyncData('getarticle', () => {
+	const {data: article} = await useAsyncData(`getarticle-${path}`, () => {
 		return queryContent().where({_path: path}).findOne();
 	});
 
