@@ -37,6 +37,11 @@
 <script setup lang="ts">
 	const { path } = useRoute();
 
+	onMounted(() => {
+		console.log(path);
+		console.log(article);
+	})
+
 	const {data: article} = await useAsyncData(`getarticle-${path}`, () => {
 		return queryContent().where({_path: path}).findOne();
 	});
@@ -144,7 +149,7 @@
 				iframe, &--img {
 					border-radius: 15px;
 					box-shadow: -1px 0px 20px fade(@black, 50%);
-					
+
 					@media @tablet {
 						width: 100%;
 					}
