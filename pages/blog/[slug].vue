@@ -37,11 +37,7 @@
 <script setup lang="ts">
 	const { path } = useRoute();
 
-	onMounted(() => {
-		console.log(removeTrailingSlashFromRoute(path));
-		console.log(article);
-	})
-
+	// Content 2 generates the pages without a trailing slash so we need to remove it
 	const {data: article} = await useAsyncData(`getarticle-${removeTrailingSlashFromRoute(path)}`, () => {
 		return queryContent('/').where({_path: removeTrailingSlashFromRoute(path)}).findOne();
 	});

@@ -8,7 +8,7 @@
 			<div class="blog-header">
 				<p class="blog-header__sub-title">Blog</p>
 				<h1>
-					Learn how to create <span class="font-blue-accent">plugins</span> and <span class="font-green-accent">scripts</span> 
+					Learn how to create <span class="font-blue-accent">plugins</span> and <span class="font-green-accent">scripts</span>
 					for adobe products, or bring <span class="font-blue-accent">motion design</span> to the <span class="font-green-accent">web</span>
 				</h1>
 			</div>
@@ -19,7 +19,7 @@
 			</div> -->
 			<div class="blog-posts">
 				<div v-for="article in articles" :key="article.index" class="post">
-					<NuxtLink :to="article._path">
+					<NuxtLink :to="article._path+'/'">
 						<div class="post__img">
 							<img :src="'/img/' + article.img" :alt="article.img">
 							<div class="post__img-overlay">
@@ -32,7 +32,7 @@
 						<h2 class="post__title">{{article.title}}</h2>
 					</NuxtLink>
 				</div>
-			</div>	
+			</div>
 		</div>
 	</div>
 </template>

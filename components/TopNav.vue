@@ -6,8 +6,8 @@
 			</NuxtLink>
 		</div>
 		<div class="top-nav__menu">
-			<NuxtLink class="top-nav__menu-item" to="/about">About</NuxtLink>
-			<NuxtLink class="top-nav__menu-item" to="/blog"><button class="primary-button primary-button--big">Blog</button></NuxtLink>
+			<NuxtLink class="top-nav__menu-item" to="/about/">About</NuxtLink>
+			<NuxtLink class="top-nav__menu-item" to="/blog/"><button class="primary-button primary-button--big">Blog</button></NuxtLink>
 			<!-- <NuxtLink class="top-nav__menu-item" to="/about">Tools</NuxtLink> -->
 		</div>
 	</div>
@@ -57,4 +57,4 @@
 			}
 		}
 	}
-</style> 
+</style>

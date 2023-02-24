@@ -8,7 +8,7 @@
 		<h1 class="home__header">Code and Motion</h1>
 		<h2 class="home__paragraph"><span class="font-green-accent">Code</span> for motion design</h2>
 		<h2 class="home__paragraph"><span class="font-blue-accent">Motion design</span> for code</h2>
-		<NuxtLink class="top-nav__menu-item" to="/blog">
+		<NuxtLink class="top-nav__menu-item" to="/blog/">
 			<button class="home__btn primary-button primary-button--big">DISCOVER</button>
 		</NuxtLink>
 	</div>
