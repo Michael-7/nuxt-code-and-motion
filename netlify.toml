@@ -1,6 +1,6 @@
 [build]
 	#The directory that contains the deploy ready files
-	publish = "dist"
+	publish = ".output/public"
 	#Default build command
 	command = "npx nuxi generate"
 
