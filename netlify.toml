@@ -1,8 +1,8 @@
 [build]
 	#The directory that contains the deploy ready files
-	publish = ".output/public"
+	publish = "dist"
 	#Default build command
-	command = "npx nuxi generate"
+	command = "npx nuxt generate"
 
 [[redirects]]
   from = "/extendscript/after-effects-scripting-basics"

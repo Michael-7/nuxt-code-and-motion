@@ -1,5 +1,7 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+	ssr: true,
+	target: 'static',
 	modules: [
 		'@nuxt/content'
 	],
@@ -22,12 +24,12 @@ export default defineNuxtConfig({
 		head: {
 			title: 'Code and Motion - Development for Web Animation and Motion Design',
 			script: [
-				{ 
+				{
 					children: `
 						window.dataLayer = window.dataLayer || [];
 						function gtag(){dataLayer.push(arguments);}
 						gtag('js', new Date());
-					
+
 						gtag('config', 'UA-175161482-1');
 					`
 				},

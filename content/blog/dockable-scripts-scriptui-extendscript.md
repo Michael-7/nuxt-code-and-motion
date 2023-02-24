@@ -2,7 +2,7 @@
 title: Dockable Scripts with ScriptUI and ExtendScript
 description: Learn ScriptUI and ExtendScript and Create Dockable Scripts for After Effects.
 img: posts/dockable-scripts-scriptui-extendscript/thumbnail-borderless.png
-video: 
+video: WJ0afngYwF0
 tags: ['ScriptUI', 'ExtendScript']
 date: 2022-10-29
 ---
@@ -42,7 +42,7 @@ If we put this edit text straight in our window like this it's going to be awful
 ```js
 	expressionInput.characters = 25;
 ```
-	
+
 Now the input will be 25 characters wide, some more space to work with.
 
 ## Handling Button Clicks
@@ -52,7 +52,7 @@ Now lets add a button to our window too like this.
 ```js
 	var applyBtn = win.add('button', undefined, 'Apply');
 ```
-	
+
 To have the program do a action when we press the button we can set a callback function. In essence it means call this function if this event is fired. We can set the `onClick` callback on a button as follows:
 
 ```js
