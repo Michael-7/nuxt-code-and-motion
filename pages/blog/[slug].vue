@@ -38,17 +38,24 @@
 	const { path } = useRoute();
 
 	onMounted(() => {
-		console.log(path);
+		console.log(removeTrailingSlashFromRoute(path));
 		console.log(article);
 	})
 
-	const {data: article} = await useAsyncData(`getarticle-${path}`, () => {
-		return queryContent().where({_path: path}).findOne();
+	const {data: article} = await useAsyncData(`getarticle-${removeTrailingSlashFromRoute(path)}`, () => {
+		return queryContent('/').where({_path: removeTrailingSlashFromRoute(path)}).findOne();
 	});
 
 	function convertDate(inputDate: string): string {
 		let date = new Date(inputDate);
 		return date.toLocaleString('en-GB', {dateStyle: 'medium'});
+	}
+
+	function removeTrailingSlashFromRoute(route: string): string {
+		if (route.slice(-1) === '/') {
+			return route.substring(0, route.length - 1);
+		}
+		return route;
 	}
 </script>
 
