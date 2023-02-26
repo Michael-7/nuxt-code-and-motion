@@ -101,7 +101,6 @@
 
 			&__img {
 				position: relative;
-				height: 216px;
 
 				&-overlay {
 					position: absolute;

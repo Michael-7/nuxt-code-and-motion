@@ -13,12 +13,16 @@
 				</div>
 				<div>
 					<h1 class="about__title">Hey, I’m Michael</h1>
-					<p>
+					<p class="hide-mob">
 						A front-end developer and digital designer from the Netherlands.
 						I like to fool around in After Effects, Illustrator and Premier.
 					</p>
 				</div>
 			</div>
+			<p class="show-mob">
+				A front-end developer and digital designer from the Netherlands.
+				I like to fool around in After Effects, Illustrator and Premier.
+			</p>
 			<p>
 				Because of the lack of nice tutorials out there I wanted to make some good resources to help people that are into design get into code.
 				Coding is really not that difficult once you learn the basics.
@@ -31,11 +35,11 @@
 			</p>
 			<a href="https://www.youtube.com/c/codeandmotion" target="_blank" class="about__link">
 				<span class="icon icon--mail"></span>
-				<span class="cnm-link">codeandmotion@gmail.com</span>
+				<span class="cnm-link about__link-text">codeandmotion@gmail.com</span>
 			</a>
 			<a href="https://www.youtube.com/c/codeandmotion" target="_blank" class="about__link">
 				<span class="icon icon--youtube"></span>
-				<span class="cnm-link">www.youtube.com/c/codeandmotion</span>
+				<span class="cnm-link about__link-text">www.youtube.com/c/codeandmotion</span>
 			</a>
 		</div>
 	</div>
@@ -45,12 +49,19 @@
 	.about {
 		display: flex;
 		justify-content: center;
+		width: 100%;
 		height: 85vh;
+
+		@media @mobile {
+			height: 100%;
+			margin-bottom: @block-spacing-2;
+		}
 
 		&__content {
 			max-width: 700px;
-			padding: @spacing-2;
+			padding: @spacing-4;
 			margin-top: @block-spacing-5;
+			box-sizing: border-box;
 		}
 
 		&__header {
@@ -96,7 +107,13 @@
 			align-items: center;
 			margin-bottom: @spacing-1;
 			transition: all .5s ease-out;
-			
+
+			@media @mobile {
+				flex-direction: column;
+				gap: 0;
+				margin-top: @spacing-4;
+			}
+
 			&:hover {
 				span {
 					text-shadow: 0 0 3px @primary-blue inset, 0 0 30px @primary-blue;
@@ -109,6 +126,10 @@
 					box-shadow: 0 0 30px @primary-blue;
 					text-shadow: 0 0 3px @primary-blue inset, 0 0 30px @primary-blue;
 				}
+			}
+
+			&-text {
+				.regular-text();
 			}
 		}
 	}

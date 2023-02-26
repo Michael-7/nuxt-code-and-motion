@@ -35,11 +35,13 @@
 </template>
 
 <script setup lang="ts">
-	const { path } = useRoute();
+	let { path } = useRoute();
 
-	// Content 2 generates the pages without a trailing slash so we need to remove it
-	const {data: article} = await useAsyncData(`getarticle-${removeTrailingSlashFromRoute(path)}`, () => {
-		return queryContent('/').where({_path: removeTrailingSlashFromRoute(path)}).findOne();
+	// Content 2 generates the pages without a trailing slash so we need to remove it to match
+	path = removeTrailingSlashFromRoute(path);
+
+	const {data: article} = await useAsyncData(`getarticle-${path}`, () => {
+		return queryContent('/').where({_path: path}).findOne();
 	});
 
 	function convertDate(inputDate: string): string {
@@ -87,6 +89,7 @@
 				@media @tablet {
 					margin-right: 0;
 					min-height: 350px;
+					padding: @spacing-2;
 				}
 
 				&:before {
@@ -125,6 +128,7 @@
 			}
 
 			&__author {
+				.regular-text();
 				display: flex;
 				align-items: center;
 				gap: @spacing-4;
@@ -168,6 +172,7 @@
 		&-body {
 			.content {
 				max-width: 775px;
+				overflow: hidden;
 			}
 
 			pre {
@@ -177,6 +182,7 @@
 
 			code {
 				span {
+					.regular-text();
 					font-family: 'Roboto Mono', monospace;
 				}
 			}

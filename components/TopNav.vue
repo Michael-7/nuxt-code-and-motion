@@ -1,7 +1,7 @@
 <template>
 	<div class="top-nav">
 		<div class="top-nav__section">
-			<NuxtLink class="top-nav__logo-link" to="/">
+			<NuxtLink class="top-nav__logo-link hide-mob" to="/">
 				<span class="top-nav__logo">Code and Motion</span>
 			</NuxtLink>
 		</div>
@@ -20,6 +20,10 @@
 		justify-content: space-between;
 		padding: @spacing-4 @spacing-8;
 
+		@media @mobile {
+			padding: @spacing-2;
+		}
+
 		&__logo {
 			font-size: 32px;
 			text-transform: uppercase;
@@ -34,10 +38,6 @@
 				right: 0;
 				height: 2px;
 				background: @primary-grad;
-			}
-
-			@media @mobile {
-				display: none;
 			}
 		}
 

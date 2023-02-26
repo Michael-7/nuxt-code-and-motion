@@ -88,5 +88,20 @@ p {
 	.content {
 		max-width: 1200px;
 		padding: 0 @spacing-2;
+		width: 100%;
+	}
+}
+
+.hide-mob {
+	@media @mobile {
+		display: none !important;
+	}
+}
+
+.show-mob {
+	display: none !important;
+
+	@media @mobile {
+		display: block !important;
 	}
 }
